@@ -1,0 +1,49 @@
+<svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky -->
+  <rect width="500" height="150" fill="#87CEEB"/>
+  
+  <!-- Ground cross-section -->
+  <rect y="150" width="500" height="150" fill="#A0826D"/>
+  
+  <!-- Underground layers -->
+  <rect y="150" width="500" height="40" fill="#8B7355"/>
+  <rect y="190" width="500" height="40" fill="#6B5344"/>
+  <rect y="230" width="500" height="70" fill="#4A3728"/>
+  
+  <!-- Drainage system pipes -->
+  <g stroke="#444" stroke-width="3" fill="none">
+    <!-- Main drain pipe -->
+    <rect x="80" y="180" width="340" height="30" rx="5" fill="#555" stroke="#333" stroke-width="2"/>
+    
+    <!-- Connection pipes -->
+    <line x1="150" y1="180" x2="150" y2="150" stroke-width="4"/>
+    <line x1="250" y1="180" x2="250" y2="140" stroke-width="4"/>
+    <line x1="350" y1="180" x2="350" y2="150" stroke-width="4"/>
+  </g>
+  
+  <!-- Catchment areas (water flow) -->
+  <path d="M 150 150 L 145 165 L 155 165 Z" fill="#3498DB"/>
+  <path d="M 250 140 L 245 165 L 255 165 Z" fill="#3498DB"/>
+  <path d="M 350 150 L 345 165 L 355 165 Z" fill="#3498DB"/>
+  
+  <!-- Water flow through pipes -->
+  <circle cx="120" cy="195" r="3" fill="#3498DB"/>
+  <circle cx="180" cy="195" r="3" fill="#3498DB"/>
+  <circle cx="240" cy="195" r="3" fill="#3498DB"/>
+  <circle cx="300" cy="195" r="3" fill="#3498DB"/>
+  <circle cx="360" cy="195" r="3" fill="#3498DB"/>
+  
+  <!-- Drainage outlet -->
+  <rect x="420" y="190" width="40" height="30" rx="4" fill="#2E86C1" stroke="#1A5490" stroke-width="2"/>
+  <text x="440" y="210" font-family="Arial" font-size="14" fill="#FFFFFF" font-weight="bold" text-anchor="middle">→</text>
+  
+  <!-- Label -->
+  <text x="250" y="30" font-family="Arial" font-size="18" fill="#333" font-weight="bold" text-anchor="middle">Drainage System Installation</text>
+  
+  <!-- Legend -->
+  <circle cx="320" cy="280" r="5" fill="#555"/>
+  <text x="330" y="285" font-family="Arial" font-size="12" fill="#333">Pipe Network</text>
+  
+  <path d="M 420 275 L 420 290" stroke="#3498DB" stroke-width="3"/>
+  <text x="430" y="285" font-family="Arial" font-size="12" fill="#333">Water flow</text>
+</svg>

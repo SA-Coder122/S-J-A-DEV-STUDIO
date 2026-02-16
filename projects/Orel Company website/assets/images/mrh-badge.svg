@@ -1,0 +1,16 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle -->
+  <circle cx="60" cy="60" r="58" fill="#1a3a52" stroke="#FF6B35" stroke-width="3"/>
+  
+  <!-- Inner circle -->
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Shield shape -->
+  <path d="M 60 20 L 85 35 L 85 65 Q 60 85 60 85 Q 35 65 35 65 L 35 35 Z" fill="#FF6B35" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Checkmark inside shield -->
+  <path d="M 50 65 L 57 72 L 72 45" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text at bottom -->
+  <text x="60" y="105" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FFD700" text-anchor="middle">A2B2 Certified</text>
+</svg>

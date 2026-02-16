@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gallery - Explore the beautiful rooms and amenities at Great Peace & Love Hotel in Ashalaja, Ghana."
+    />
+    <title>Gallery | Great Peace & Love Hotel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <h1>GPL Hotel</h1>
+          </div>
+          <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Gallery</h1>
+        <p>Experience the beauty of our hotel</p>
+      </div>
+    </section>
+
+    <!-- Gallery Content -->
+    <main class="container">
+      <section class="gallery-intro">
+        <p>
+          Explore our serene rooms, modern facilities, and beautiful
+          surroundings. Click on any image to view in full detail.
+        </p>
+      </section>
+
+      <section class="gallery-grid" id="galleryGrid">
+        <!-- Gallery items with placeholder colors -->
+        <div
+          class="gallery-item fade-in"
+          data-title="Executive Room"
+          data-desc="Spacious executive room with balcony"
+        >
+          <div
+            class="gallery-image"
+            style="
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              cursor: pointer;
+            "
+          >
+            <span>🏨 Executive Room</span>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item fade-in"
+          data-title="First Class Room"
+          data-desc="Comfortable first class accommodation"
+        >
+          <div
+            class="gallery-image"
+            style="
+              background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+              cursor: pointer;
+            "
+          >
+            <span>⭐ First Class Room</span>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item fade-in"
+          data-title="Second Class Room"
+          data-desc="Affordable comfort room"
+        >
+          <div
+            class="gallery-image"
+            style="
+              background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+              cursor: pointer;
+            "
+          >
+            <span>🛏️ Second Class Room</span>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item fade-in"
+          data-title="Restaurant"
+          data-desc="On-site dining area"
+        >
+          <div
+            class="gallery-image"
+            style="
+              background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+              cursor: pointer;
+            "
+          >
+            <span>🍽️ Restaurant</span>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item fade-in"
+          data-title="Bar & Lounge"
+          data-desc="Relaxing bar area"
+        >
+          <div
+            class="gallery-image"
+            style="
+              background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+              cursor: pointer;
+            "
+          >
+            <span>🍸 Bar & Lounge</span>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item fade-in"
+          data-title="Conference Room"
+          data-desc="Modern meeting space"
+        >
+          <div
+            class="gallery-image"
+            style="
+              background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+              cursor: pointer;
+            "
+          >
+            <span>📊 Conference Room</span>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item fade-in"
+          data-title="Front Desk"
+          data-desc="24-hour reception area"
+        >
+          <div
+            class="gallery-image"
+            style="
+              background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+              cursor: pointer;
+            "
+          >
+            <span>🔔 Front Desk</span>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item fade-in"
+          data-title="Parking Area"
+          data-desc="Secure private parking"
+        >
+          <div
+            class="gallery-image"
+            style="
+              background: linear-gradient(135deg, #2e2e2e 0%, #666666 100%);
+              cursor: pointer;
+            "
+          >
+            <span>🅿️ Parking Area</span>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item fade-in"
+          data-title="Balcony View"
+          data-desc="Serene balcony atmosphere"
+        >
+          <div
+            class="gallery-image"
+            style="
+              background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+              cursor: pointer;
+            "
+          >
+            <span>🌅 Balcony View</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+      <div class="lightbox-close" id="lightboxClose">&times;</div>
+      <div class="lightbox-container">
+        <div class="lightbox-image" id="lightboxImage"></div>
+        <div class="lightbox-content">
+          <h2 id="lightboxTitle"></h2>
+          <p id="lightboxDesc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-gallery fade-in">
+      <div class="container">
+        <h2>Ready to Experience These Beautiful Spaces?</h2>
+        <p>
+          Book your stay and discover the serenity of Great Peace & Love Hotel
+        </p>
+        <button class="btn btn-white" id="bookGalleryCTA">
+          Book Now via WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Great Peace & Love Hotel</h3>
+            <p>Ashalaja, Greater Accra Region, Ghana</p>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p>📞 <a href="tel:+233552180078">+233 55 218 0078</a></p>
+            <p>💬 WhatsApp Booking</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="rooms.html">Rooms</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Great Peace & Love Hotel. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

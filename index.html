@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SA Dev - Web Development & Digital Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3H5NxgmpG5rYmChAzDc6Em6sO+M8aDsbVeT7i+7gkoH1aJJ5kgLW7fezbF+VUVffJyQ3I+M1xmIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Cursor Trail Container -->
+    <div id="cursor-trail"></div>
+
+    <!-- Parallax Depth Transition Overlay -->
+    <div id="fifa-overlay" class="fifa-overlay">
+      <div class="fifa-overlay-content">
+        <div class="fifa-overlay-text">
+          <span class="fifa-section-name"></span>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav>
+        <div class="logo"><strong>S|A</strong> <em>DEV</em></div>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <p class="subtitle">Welcome to S|A Dev Studio</p>
+          <h1>
+            Web Development <span class="gradient-text">&</span> Digital
+            Excellence
+          </h1>
+          <p class="description">
+            Professional web development solutions crafted with precision and
+            creativity.
+            <br /><strong>Modern Design</strong> •
+            <strong>Interactive Experiences</strong> •
+            <strong>Scalable Solutions</strong>
+          </p>
+          <div class="social-links">
+            <a
+              href="https://github.com/SA-Coder122/SA-Coder122"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <img src="assets/images/github.svg" alt="GitHub" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abbey-j-shadrack-3368a4399/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <img src="assets/images/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="mailto:ShadrackAbbey122@gmailcom" aria-label="Email">
+              <img src="assets/images/mail.svg" alt="Email" />
+            </a>
+          </div>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">View Our Work</a>
+            <a href="#contact" class="btn btn-secondary">Get Started</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section id="services">
+        <div class="container">
+          <h2>Our Services</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>Web Design</h3>
+              <p>
+                Creating stunning, responsive websites that captivate your
+                audience and enhance user engagement.
+              </p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Responsive Design</li>
+                <li><i class="fas fa-check"></i> UI/UX Optimization</li>
+                <li><i class="fas fa-check"></i> Modern Aesthetics</li>
+              </ul>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3>Frontend Development</h3>
+              <p>
+                Building interactive, fast-loading web applications with clean,
+                maintainable code using modern technologies.
+              </p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> HTML5/CSS3</li>
+                <li><i class="fas fa-check"></i> JavaScript/DOM</li>
+                <li><i class="fas fa-check"></i> Performance Optimization</li>
+              </ul>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-wand-magic-sparkles"></i>
+              </div>
+              <h3>Web Experience</h3>
+              <p>
+                Delivering seamless digital experiences with smooth animations,
+                interactions, and intuitive navigation.
+              </p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Interactive Features</li>
+                <li><i class="fas fa-check"></i> Smooth Animations</li>
+                <li><i class="fas fa-check"></i> User-Focused Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2>Featured Projects</h2>
+          <p class="section-subtitle">
+            Showcasing our web development expertise and creative solutions
+          </p>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                <img src="assets/images/Screenshot 2026-01-19 061340.png" />
+                <div class="project-overlay">
+                  <a
+                    href="projects/hotel website/index.html"
+                    class="btn"
+                    target="_blank"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+              <h3>A Hotel Booking website</h3>
+              <p>
+                A fully functional hotel booking website with smooth animation and
+                responsive design.
+              </p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </article>
+            <!-- More project cards here -->
+            <article class="project-card">
+              <div class="project-image">
+                <img src="assets/images/Screenshot 2026-01-19 061751.png" />
+                <div class="project-overlay">
+                  <a href="projects/Score-Keeper-App/" class="btn" target="_blank"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+              <h3>A Score Keeper Web app</h3>
+              <p>
+                Support countdown feature, fully functional with a responsive design and give users the opportunity to track scores. <br /><em
+                  >Project is still under development.</em
+                >
+              </p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img src="assets/images/Screenshot 2026-01-19 061432.png" />
+                <div class="project-overlay">
+                  <a
+                    href="projects/Orel Company website/index.html"
+                    class="btn"
+                    target="_blank"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+              <h3>A business website</h3>
+              <p>An Orel Company Website with a modern design and responsive layout.</p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============PRICING SECTION============== -->
+      <section id="pricing">
+        <div class="container">
+          <h2>Pricing & Packages</h2>
+          <p class="section-subtitle">
+            Professional web development solutions with transparent pricing
+          </p>
+
+          <!-- Development Packages -->
+          <div class="pricing-section">
+            <h3 class="pricing-category-title">
+              <i class="fas fa-code"></i> Development Packages
+            </h3>
+            <p class="pricing-description">
+              Hand-coded with modern HTML5, CSS3, and JavaScript for maximum
+              performance.
+            </p>
+            <div class="pricing-grid">
+              <div class="pricing-card">
+                <div class="pricing-header">
+                  <h4>The Starter</h4>
+                  <p class="best-for">Personal portfolios & landing pages</p>
+                </div>
+                
+                <div class="pricing-amount">
+                  <span class="currency">GHS</span>
+                  <span class="price">850 – 1,500</span>
+                  <span class="price-low" style="text-decoration: line-through;"> 1,500 – 2,500</span>
+                </div>
+                <ul class="pricing-features">
+                  <li><i class="fas fa-check"></i> 1-3 Page Website</li>
+                  <li><i class="fas fa-check"></i> Responsive Design</li>
+                  <li><i class="fas fa-check"></i> Contact Form</li>
+                  <li><i class="fas fa-check"></i> Mobile Optimized</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">Get Started</a>
+              </div>
+
+              <div class="pricing-card featured">
+                <div class="pricing-badge">Most Popular</div>
+                <div class="pricing-header">
+                  <h4>Business Pro</h4>
+                  <p class="best-for">Small business websites</p>
+                </div>
+                <div class="pricing-amount">
+                  <span class="currency">GHS</span>
+                  <span class="price">2,500 – 3,500</span>
+                  <span class="price-low" style="text-decoration: line-through;"> 2,800 – 4,000</span>
+
+                </div>
+                <ul class="pricing-features">
+                  <li><i class="fas fa-check"></i> 5-10 Page Website</li>
+                  <li><i class="fas fa-check"></i> Advanced UI/UX</li>
+                  <li><i class="fas fa-check"></i> SEO Optimization</li>
+                  <li><i class="fas fa-check"></i> Speed Optimized</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Choose Plan</a>
+              </div>
+
+              <div class="pricing-card">
+                <div class="pricing-header">
+                  <h4>Elite Corporate</h4>
+                  <p class="best-for">Enterprise solutions</p>
+                </div>
+                <div class="pricing-amount">
+                  <span class="currency">GHS</span>
+                  <span class="price">5,000+</span>
+                  <span class="price-low" style="text-decoration: line-through;">6000+</span>
+
+                </div>
+                <ul class="pricing-features">
+                  <li><i class="fas fa-check"></i> Custom Multi-page</li>
+                  <li><i class="fas fa-check"></i> Advanced Animations</li>
+                  <li><i class="fas fa-check"></i> Full SEO Suite</li>
+                  <li><i class="fas fa-check"></i> Premium Support</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hosting & Maintenance -->
+          <div class="pricing-section">
+            <h3 class="pricing-category-title">
+              <i class="fas fa-server"></i> Hosting & Maintenance
+            </h3>
+            <p class="pricing-description">
+              Powered by StormerHost for 99.9% uptime and blazing-fast
+              performance.
+            </p>
+            <div class="pricing-grid">
+              <div class="pricing-card">
+                <div class="pricing-header">
+                  <h4>Hosting & SSL</h4>
+                  <p class="best-for">Annual subscription</p>
+                </div>
+                <div class="pricing-amount">
+                  <span class="currency">GHS</span>
+                  <span class="price">850</span>
+                  <span class="period">/year</span>
+                </div>
+                <ul class="pricing-features">
+                  <li><i class="fas fa-check"></i> High-Speed Hosting</li>
+                  <li><i class="fas fa-check"></i> SSL Certificate</li>
+                  <li><i class="fas fa-check"></i> Domain Renewal</li>
+                  <li><i class="fas fa-check"></i> 99.9% Uptime</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">Select</a>
+              </div>
+
+              <div class="pricing-card featured">
+                <div class="pricing-badge">Best Value</div>
+                <div class="pricing-header">
+                  <h4>Managed Care</h4>
+                  <p class="best-for">Monthly subscription</p>
+                </div>
+                <div class="pricing-amount">
+                  <span class="currency">GHS</span>
+                  <span class="price">150</span>
+                  <span class="period">/month</span>
+                </div>
+                <ul class="pricing-features">
+                  <li><i class="fas fa-check"></i> All Hosting Features</li>
+                  <li><i class="fas fa-check"></i> Monthly Backups</li>
+                  <li><i class="fas fa-check"></i> 2 hrs Content Updates</li>
+                  <li><i class="fas fa-check"></i> Priority Support</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add-ons -->
+          <div class="pricing-section">
+            <h3 class="pricing-category-title">
+              <i class="fas fa-plus-circle"></i> Premium Add-Ons
+            </h3>
+            <p class="pricing-description">
+              Enhance your digital presence with optional services.
+            </p>
+            <div class="addons-grid">
+              <div class="addon-card">
+                <h4><i class="fas fa-search"></i> Advanced SEO Audit</h4>
+                <p>Complete search engine optimization analysis</p>
+                <div class="addon-price">GHS 450 <span>One-time</span></div>
+              </div>
+              <div class="addon-card">
+                <h4><i class="fas fa-bolt"></i> Speed Optimization</h4>
+                <p>Lighthouse 95+ performance guarantee</p>
+                <div class="addon-price">GHS 300 <span>One-time</span></div>
+              </div>
+              <div class="addon-card">
+                <h4>
+                  <i class="fas fa-envelope"></i> Contact Form Integration
+                </h4>
+                <p>Custom form with email notifications</p>
+                <div class="addon-price">GHS 200 <span>One-time</span></div>
+              </div>
+              <div class="addon-card">
+                <h4><i class="fas fa-file-alt"></i> Extra Static Page</h4>
+                <p>Additional custom page for your site</p>
+                <div class="addon-price">GHS 250 <span>Per page</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why Choose Us -->
+          <div class="pricing-benefits">
+            <h3 class="benefits-title">Why Choose Custom Code?</h3>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h4>Unmatched Speed</h4>
+                <p>Static sites load 3x faster than WordPress</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-lock"></i>
+                </div>
+                <h4>Ironclad Security</h4>
+                <p>No databases to hack; your site stays safe</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-search"></i>
+                </div>
+                <h4>Better Google Ranking</h4>
+                <p>Clean code is loved by search engines</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-coins"></i>
+                </div>
+                <h4>Zero Monthly Bloat</h4>
+                <p>Only pay for what you actually use</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Terms -->
+          <div class="pricing-terms">
+            <h3><i class="fas fa-handshake"></i> Payment Terms</h3>
+            <div class="terms-content">
+              <div class="term-item">
+                <span class="term-label">Deposit:</span>
+                <span class="term-value">50% to start the project</span>
+              </div>
+              <div class="term-item">
+                <span class="term-label">Balance:</span>
+                <span class="term-value">50% upon launch</span>
+              </div>
+              <div class="term-item">
+                <span class="term-label">Support:</span>
+                <span class="term-value">30 days free updates post-launch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <h2>What Our Clients Say</h2>
+            <p class="section-subtitle">Real feedback from businesses we've helped transform their digital presence</p>
+          </div>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial-card scroll-animate">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Shadrack delivered an exceptional website that exceeded our expectations. Professional, responsive, and exactly what we needed."</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>Manager, Tech Solutions Inc</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card scroll-animate">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"The team's attention to detail and commitment to getting things right was outstanding. Our site loads fast and converts visitors into customers."</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Michael Chen</h4>
+                  <p>CEO, Digital Ventures</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card scroll-animate">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="testimonial-text">"Best web development experience we've had. Responsive support, clean code, and a beautiful design that represents our brand perfectly."</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Emma Rodriguez</h4>
+                  <p>Founder, Creative Agency Co</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <section id="contact">
+        <div class="container">
+          <h2>Get in Touch</h2>
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">
+              <a
+                href="https://wa.me/233534078670?text=Hello%20Shadrack"
+                target="_blank"
+                class="btn"
+                >Message on WhatsApp</a
+              >
+            </button>
+          </form>
+        </div>
+        <div class="Alert">
+          <h3>Message Sent!</h3>
+          <span><i class="fas fa-check-circle"></i></span>
+          <p>Thank you for reaching out</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <p>&reg;S|A <em>Coder</em>. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/animation.js"></script>
+  </body>
+</html>
