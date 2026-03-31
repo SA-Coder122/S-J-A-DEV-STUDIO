@@ -84,32 +84,6 @@ class FIFATransitionController {
 // Initialize FIFA Transition Controller
 const fifaController = new FIFATransitionController();
 
-// ====================== CURSOR TRAIL EFFECT ======================
-
-const cursorTrail = document.getElementById("cursor-trail");
-const trailDots = [];
-let mouseX = 0,
-  mouseY = 0;
-
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-
-  // Create trail dot
-  if (Math.random() > 0.8) {
-    const dot = document.createElement("div");
-    dot.className = "cursor-dot";
-    dot.style.left = mouseX - 4 + "px";
-    dot.style.top = mouseY - 4 + "px";
-    cursorTrail.appendChild(dot);
-
-    // Remove dot after animation completes
-    setTimeout(() => {
-      dot.remove();
-    }, 1000);
-  }
-});
-
 // ====================Theme Toggle===================
 const themeToggle = document.getElementById("theme-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -132,7 +106,8 @@ const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   setTheme(savedTheme);
 } else {
-  setTheme(prefersDarkScheme.matches ? "dark" : "light");
+  // Default to dark theme for glassmorphism aesthetic
+  setTheme("dark");
 }
 
 themeToggle.addEventListener("click", () => {
@@ -205,25 +180,6 @@ if (contactForm) {
   });
 }
 
-// ============================Intersection Observer for animations====================
-const observerOptions = {
-  threshold: 0.5,
-  rootMargin: "0px",
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-    }
-  });
-}, observerOptions);
-
-// Observe skill cards and service cards
-document.querySelectorAll(".skill-card, .service-card").forEach((card) => {
-  observer.observe(card);
-});
-
 // ============================WhatsApp Integration============================
 const whatsappButton = document.querySelector(".contact-form .btn a");
 
@@ -244,20 +200,6 @@ if (whatsappButton && contactForm) {
     whatsappButton.href = `https://wa.me/233534078670?text=${encodedMessage}`;
   });
 }
-
-// ======================= Smooth Scroll Enhancement =======================
-window.addEventListener(
-  "scroll",
-  () => {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll(".hero::after");
-
-    parallaxElements.forEach((element) => {
-      element.style.transform = `translateY(${scrolled * 0.5}px)`;
-    });
-  },
-  { passive: true },
-);
 
 // ======================= Scroll Animations with Intersection Observer =======================
 class ScrollAnimationManager {
@@ -383,38 +325,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Add parallax to hero background
-const hero = document.querySelector(".hero");
-if (hero) {
-  hero.classList.add("parallax");
-  const heroContent = document.querySelector(".hero-content");
-  if (heroContent) {
-    heroContent.classList.add("parallax-element", "parallax-slow");
-  }
-}
-
-// ======================= Add subtle animations on scroll =======================
-const cards = document.querySelectorAll(
-  ".project-card, .service-card, .skill-card",
-);
-const scrollObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
-  },
-  {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  },
-);
-
-cards.forEach((card) => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(20px)";
-  card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-  scrollObserver.observe(card);
-});
