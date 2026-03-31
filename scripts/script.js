@@ -119,13 +119,16 @@ themeToggle.addEventListener("click", () => {
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-navToggle.addEventListener("click", () => {
+navToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navToggle.classList.toggle("active");
   navLinks.classList.toggle("active");
 });
 
 // ================Close mobile menu when clicking outside===============
 document.addEventListener("click", (e) => {
   if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+    navToggle.classList.remove("active");
     navLinks.classList.remove("active");
   }
 });
@@ -138,7 +141,8 @@ document.querySelectorAll(".nav-links a[href^='#']").forEach((anchor) => {
     if (href && href !== "#") {
       e.preventDefault();
       // FIFA controller will handle the transition
-      // Just close the mobile menu
+      // Close the mobile menu
+      navToggle.classList.remove("active");
       navLinks.classList.remove("active");
     }
   });
@@ -324,4 +328,3 @@ document.addEventListener("DOMContentLoaded", () => {
     p.classList.add("scroll-animate");
   });
 });
-
