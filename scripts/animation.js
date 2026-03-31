@@ -68,29 +68,6 @@ function initRevealAnimations() {
     });
   });
 
-  // Service cards reveal with stagger - Enhanced scroll trigger
-  gsap.from(".service-card", {
-    scrollTrigger: {
-      trigger: "#services",
-      start: "top 75%",
-      end: "top 25%",
-      scrub: 0.8,
-      onEnter: () => {
-        gsap.utils.toArray(".service-card").forEach((card, i) => {
-          gsap.to(card, {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            delay: i * 0.1,
-            ease: "power3.out",
-          });
-        });
-      },
-    },
-    opacity: 0,
-    y: 40,
-    transformOrigin: "center bottom",
-  });
 
   // Project cards reveal - Enhanced with better triggers
   gsap.utils.toArray(".project-card").forEach((card, index) => {
