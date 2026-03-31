@@ -19,12 +19,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- GSAP (GreenSock Animation Platform) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Cursor Trail Container -->
-    <div id="cursor-trail"></div>
-
     <!-- Parallax Depth Transition Overlay -->
     <div id="fifa-overlay" class="fifa-overlay">
       <div class="fifa-overlay-content">
@@ -50,7 +50,7 @@
           <li><a href="#contact">Contact</a></li>
           <li>
             <button id="theme-toggle" aria-label="Toggle dark mode">
-              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
             </button>
           </li>
         </ul>
@@ -59,7 +59,9 @@
 
     <main>
       <section id="home" class="hero">
-        <div class="container">
+        <div class="hero-glow hero-glow--left" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow--right" aria-hidden="true"></div>
+        <div class="container hero-inner">
           <p class="subtitle">Welcome to S|A Dev Studio</p>
           <h1>
             Web Development <span class="gradient-text">&</span> Digital
@@ -165,10 +167,10 @@
           <div class="projects-grid">
             <article class="project-card">
               <div class="project-image">
-                <img src="assets/images/Great hotel.png" />
+                <img src="assets/images/Screenshot 2026-01-19 061340.png" />
                 <div class="project-overlay">
                   <a
-                    href="https://sa-coder122.github.io/Great-Peace-Lovel-Hotel/"
+                    href="projects/hotel website/index.html"
                     class="btn"
                     target="_blank"
                     >View Project</a
@@ -177,8 +179,8 @@
               </div>
               <h3>A Hotel Booking website</h3>
               <p>
-                A fully functional hotel booking website with smooth animation and
-                responsive design.
+                A fully functional hotel booking website with smooth animation
+                and responsive design.
               </p>
               <div class="tech-stack">
                 <span>HTML</span>
@@ -191,14 +193,18 @@
               <div class="project-image">
                 <img src="assets/images/Screenshot 2026-01-19 061751.png" />
                 <div class="project-overlay">
-                  <a href="projects/Score-Keeper-App/" class="btn" target="_blank"
+                  <a
+                    href="projects/Score-Keeper-App/"
+                    class="btn"
+                    target="_blank"
                     >View Project</a
                   >
                 </div>
               </div>
               <h3>A Score Keeper Web app</h3>
               <p>
-                Support countdown feature, fully functional with a responsive design and give users the opportunity to track scores. <br /><em
+                Support countdown feature, fully functional with a responsive
+                design and give users the opportunity to track scores. <br /><em
                   >Project is still under development.</em
                 >
               </p>
@@ -221,10 +227,36 @@
                 </div>
               </div>
               <h3>A business website</h3>
-              <p>An Orel Company Website with a modern design and responsive layout.</p>
+              <p>
+                An Orel Company Website with a modern design and responsive
+                layout.
+              </p>
               <div class="tech-stack">
                 <span>HTML</span>
                 <span>CSS</span>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img src="assets/images/Great hotel.png" />
+                <div class="project-overlay">
+                  <a
+                    href="https://sa-coder122.github.io/Great-Peace-Lovel-Hotel/"
+                    class="btn"
+                    target="_blank"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+              <h3>A hotel booking website</h3>
+              <p>
+                An Hotel Booking Website with a modern design and responsive
+                layout.
+              </p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Javascript</span>
               </div>
             </article>
           </div>
@@ -254,11 +286,13 @@
                   <h4>The Starter</h4>
                   <p class="best-for">Personal portfolios & landing pages</p>
                 </div>
-                
+
                 <div class="pricing-amount">
                   <span class="currency">GHS</span>
                   <span class="price">850 – 1,500</span>
-                  <span class="price-low" style="text-decoration: line-through;"> 1,500 – 2,500</span>
+                  <span class="price-low" style="text-decoration: line-through">
+                    1,500 – 2,500</span
+                  >
                 </div>
                 <ul class="pricing-features">
                   <li><i class="fas fa-check"></i> 1-3 Page Website</li>
@@ -278,8 +312,9 @@
                 <div class="pricing-amount">
                   <span class="currency">GHS</span>
                   <span class="price">2,500 – 3,500</span>
-                  <span class="price-low" style="text-decoration: line-through;"> 2,800 – 4,000</span>
-
+                  <span class="price-low" style="text-decoration: line-through">
+                    2,800 – 4,000</span
+                  >
                 </div>
                 <ul class="pricing-features">
                   <li><i class="fas fa-check"></i> 5-10 Page Website</li>
@@ -298,8 +333,9 @@
                 <div class="pricing-amount">
                   <span class="currency">GHS</span>
                   <span class="price">5,000+</span>
-                  <span class="price-low" style="text-decoration: line-through;">6000+</span>
-
+                  <span class="price-low" style="text-decoration: line-through"
+                    >6000+</span
+                  >
                 </div>
                 <ul class="pricing-features">
                   <li><i class="fas fa-check"></i> Custom Multi-page</li>
@@ -458,9 +494,12 @@
         <div class="container">
           <div class="section-header">
             <h2>What Our Clients Say</h2>
-            <p class="section-subtitle">Real feedback from businesses we've helped transform their digital presence</p>
+            <p class="section-subtitle">
+              Real feedback from businesses we've helped transform their digital
+              presence
+            </p>
           </div>
-          
+
           <div class="testimonials-grid">
             <div class="testimonial-card scroll-animate">
               <div class="testimonial-rating">
@@ -470,7 +509,11 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
               </div>
-              <p class="testimonial-text">"Shadrack delivered an exceptional website that exceeded our expectations. Professional, responsive, and exactly what we needed."</p>
+              <p class="testimonial-text">
+                "Shadrack delivered an exceptional website that exceeded our
+                expectations. Professional, responsive, and exactly what we
+                needed."
+              </p>
               <div class="testimonial-author">
                 <div class="author-info">
                   <h4>Sarah Johnson</h4>
@@ -487,7 +530,11 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
               </div>
-              <p class="testimonial-text">"The team's attention to detail and commitment to getting things right was outstanding. Our site loads fast and converts visitors into customers."</p>
+              <p class="testimonial-text">
+                "The team's attention to detail and commitment to getting things
+                right was outstanding. Our site loads fast and converts visitors
+                into customers."
+              </p>
               <div class="testimonial-author">
                 <div class="author-info">
                   <h4>Michael Chen</h4>
@@ -504,7 +551,11 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
               </div>
-              <p class="testimonial-text">"Best web development experience we've had. Responsive support, clean code, and a beautiful design that represents our brand perfectly."</p>
+              <p class="testimonial-text">
+                "Best web development experience we've had. Responsive support,
+                clean code, and a beautiful design that represents our brand
+                perfectly."
+              </p>
               <div class="testimonial-author">
                 <div class="author-info">
                   <h4>Emma Rodriguez</h4>
@@ -513,6 +564,8 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
       <section id="contact">
         <div class="container">
@@ -565,7 +618,3 @@
     <script src="scripts/animation.js"></script>
   </body>
 </html>
-
-
-
-
