@@ -186,6 +186,28 @@ body {
   }
 }
 
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
 /* Scroll animation classes */
 .scroll-animate {
   opacity: 0;
@@ -793,9 +815,12 @@ nav {
 
 .hero {
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
-  padding: 2rem 0 5rem;
+  justify-content: center;
+  padding: 4rem 0 5rem;
+  margin-top: 0;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -844,6 +869,7 @@ nav {
 .hero-glow--right {
   right: -6%;
   transform: skewX(10deg) translateX(0);
+  opacity: 0.7;
 }
 
 .hero::before {
@@ -857,7 +883,8 @@ nav {
   );
   filter: blur(70px);
   animation: heroAmbient 20s ease-in-out infinite alternate;
-  z-index: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero::after {
@@ -870,7 +897,7 @@ nav {
     rgba(5, 1, 13, 0.75) 100%
   );
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 @keyframes heroAmbient {
@@ -1337,6 +1364,8 @@ nav {
   box-shadow: var(--shadow-md);
   transition: var(--transition);
   border: 1px solid var(--border-color);
+  position: relative;
+  height: 30rem;
 }
 
 .project-card:hover {
@@ -1395,6 +1424,8 @@ nav {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
 }
 
 .tech-stack span {
@@ -2664,9 +2695,14 @@ footer {
 
   .hero {
     min-height: 100vh;
-    padding: 2rem 0;
+    height: 100vh;
+    padding: 3.5rem 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  .hero-inner,
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -2777,7 +2813,7 @@ footer {
   }
 
   .project-card {
-    height: auto;
+    height: 24rem;
   }
 
   /* Skills */
@@ -2850,8 +2886,12 @@ footer {
   }
 
   .hero {
-    min-height: 60vh;
-    padding: 5rem 0;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 3rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-text h1 {
@@ -2892,6 +2932,7 @@ footer {
   /* Projects */
   .project-card h3 {
     font-size: 1.1rem;
+
   }
 
   .project-card-content {
@@ -3017,8 +3058,12 @@ footer {
   }
 
   .hero {
-    min-height: 50vh;
-    padding: 3rem 0;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 2.5rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-text h1 {
@@ -3268,17 +3313,9 @@ footer {
 /* Landscape Mode - Mobile */
 @media (max-height: 500px) and (orientation: landscape) {
   .hero {
-    min-height: auto;
+    min-height: 100vh;
+    height: auto;
     padding: 1rem 0;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
   }
 
   header {
