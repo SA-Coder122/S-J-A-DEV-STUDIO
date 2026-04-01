@@ -2813,7 +2813,7 @@ footer {
   }
 
   .project-card {
-    height: 24rem;
+    height: 25rem;
   }
 
   /* Skills */
@@ -2934,6 +2934,7 @@ footer {
     font-size: 1.1rem;
 
   }
+   
 
   .project-card-content {
     padding: 1rem;
@@ -3277,7 +3278,7 @@ footer {
   }
 
   .project-card {
-    height: auto;
+    height: 26rem;
   }
 
   .pricing-card {
