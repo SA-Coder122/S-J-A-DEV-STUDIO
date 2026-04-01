@@ -1,242 +1,107 @@
-// ====================== PARALLAX DEPTH TRANSITION OVERLAY ======================
-class FIFATransitionController {
-  constructor() {
-    this.overlay = document.getElementById("fifa-overlay");
-    this.overlayText = document.querySelector(".fifa-section-name");
-    this.isAnimating = false;
-    this.currentSection = null;
-    this.init();
-  }
+// Mobile Navigation Toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const navItems = document.querySelectorAll(".nav-links a");
 
-  init() {
-    // Intercept navigation links
-    document.querySelectorAll('a[href^="#"]').forEach((link) => {
-      link.addEventListener("click", (e) => {
-        // Skip internal links and theme toggle
-        if (link.id === "theme-toggle" || !link.getAttribute("href")) return;
-
-        const target = link.getAttribute("href");
-        const targetElement = document.querySelector(target);
-
-        if (targetElement && targetElement.id !== this.currentSection) {
-          e.preventDefault();
-          this.transitionToSection(target, targetElement);
-        }
-      });
-    });
-
-    // Initialize current section
-    this.currentSection = "home";
-  }
-
-  transitionToSection(targetId, targetElement) {
-    if (this.isAnimating) return;
-
-    this.isAnimating = true;
-    const sectionName = this.getSectionName(targetId);
-
-    // Opening animation
-    this.openOverlay(sectionName, () => {
-      // Scroll to section during animation
-      targetElement.scrollIntoView({ behavior: "smooth" });
-      this.currentSection = targetId.slice(1);
-
-      // Close overlay after content settles
-      setTimeout(() => {
-        this.closeOverlay();
-      }, 500);
+  // Toggle navigation menu on hamburger click
+  if (navToggle) {
+    navToggle.addEventListener("click", function () {
+      navToggle.classList.toggle("active");
+      navLinks.classList.toggle("active");
     });
   }
 
-  openOverlay(sectionName, callback) {
-    // Ensure clean state
-    this.overlay.classList.remove("reverse");
-    this.overlay.classList.add("active");
-    this.overlayText.textContent = sectionName;
+  // Close menu when a nav link is clicked
+  navItems.forEach((link) => {
+    link.addEventListener("click", function () {
+      navToggle.classList.remove("active");
+      navLinks.classList.remove("active");
+    });
+  });
 
-    // Callback after opening animation completes
-    setTimeout(callback, 800);
-  }
+  // Close menu when clicking outside of nav
+  document.addEventListener("click", function (event) {
+    if (navLinks.classList.contains("active")) {
+      const isClickInsideNav = navLinks.contains(event.target);
+      const isClickInsideToggle = navToggle.contains(event.target);
 
-  closeOverlay() {
-    this.overlay.classList.add("reverse");
+      if (!isClickInsideNav && !isClickInsideToggle) {
+        navToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+      }
+    }
+  });
 
-    setTimeout(() => {
-      this.overlay.classList.remove("active", "reverse");
-      this.isAnimating = false;
-    }, 600);
-  }
-
-  getSectionName(sectionId) {
-    const names = {
-      "#home": "Home",
-      "#services": "Services",
-      "#projects": "Projects",
-      "#pricing": "Pricing",
-      "#skills": "Skills",
-      "#about": "About",
-      "#contact": "Contact",
-    };
-    return names[sectionId] || "Section";
-  }
-}
-
-// Initialize FIFA Transition Controller
-const fifaController = new FIFATransitionController();
-
-// ====================Theme Toggle===================
-const themeToggle = document.getElementById("theme-toggle");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-function setTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-  const icon = themeToggle.querySelector("i");
-  if (theme === "dark") {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-  } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
-  }
-}
-
-// =================Initialize theme=====================
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  setTheme(savedTheme);
-} else {
-  // Default to dark theme for glassmorphism aesthetic
-  setTheme("dark");
-}
-
-themeToggle.addEventListener("click", () => {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  setTheme(currentTheme === "dark" ? "light" : "dark");
-});
-
-// =======================Mobile Navigation=============================
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-navToggle.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navToggle.classList.toggle("active");
-  navLinks.classList.toggle("active");
-});
-
-// ================Close mobile menu when clicking outside===============
-document.addEventListener("click", (e) => {
-  if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-    navToggle.classList.remove("active");
-    navLinks.classList.remove("active");
-  }
-});
-
-// ============Navigation with FIFA Transitions===============
-// Intercept nav links for FIFA overlay effect
-document.querySelectorAll(".nav-links a[href^='#']").forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    const href = this.getAttribute("href");
-    if (href && href !== "#") {
-      e.preventDefault();
-      // FIFA controller will handle the transition
-      // Close the mobile menu
+  // Handle window resize - close mobile menu if resized to larger screen
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
       navToggle.classList.remove("active");
       navLinks.classList.remove("active");
     }
   });
-});
 
-// ===========================Contact Form===========================
-const contactForm = document.getElementById("contact-form");
-const alertBox = document.querySelector(".Alert");
+  // ===== SCROLL TO REVEAL ANIMATION =====
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -100px 0px",
+  };
 
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("scroll-animate");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
 
-    // Simple form validation
-    const name = contactForm.name.value.trim();
-    const email = contactForm.email.value.trim();
-    const message = contactForm.message.value.trim();
-
-    if (!name || !email || !message) {
-      alert("Please fill in all fields");
-      return;
-    }
-
-    // ======================Simulate form submission=========================
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitButton.textContent;
-    submitButton.textContent = "Sending...";
-    submitButton.disabled = true;
-
-    setTimeout(() => {
-      alertBox.classList.toggle("open");
-      setTimeout(() => {
-        alertBox.classList.toggle("open");
-      }, 2000);
-      contactForm.reset();
-      submitButton.textContent = originalText;
-      submitButton.disabled = false;
-    }, 1500);
+  // Observe cards for scroll reveal (not sections, as they have their own animations)
+  const revealElements = document.querySelectorAll(
+    ".service-card, .project-card, .pricing-card, .testimonial-card, .benefit-item",
+  );
+  revealElements.forEach((element) => {
+    observer.observe(element);
   });
-}
 
-// ============================WhatsApp Integration============================
-const whatsappButton = document.querySelector(".contact-form .btn a");
-
-if (whatsappButton && contactForm) {
-  whatsappButton.addEventListener("click", (e) => {
-    const name = contactForm.name.value.trim();
-    const email = contactForm.email.value.trim();
-    const message = contactForm.message.value.trim();
-
-    if (!name || !email || !message) {
+  // ===== WHATSAPP CONTACT FORM =====
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      alert("Please fill in all fields before sending");
-      return;
-    }
 
-    const whatsappMessage = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    whatsappButton.href = `https://wa.me/233534078670?text=${encodedMessage}`;
-  });
-}
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-// ======================= Scroll Animations with Intersection Observer =======================
+      if (name && email && message) {
+        // Create WhatsApp message with form data
+        const whatsappMessage = `Hello, my name is ${name}.\nEmail: ${email}\n\nMessage: ${message}`;
+        const encodedMessage = encodeURIComponent(whatsappMessage);
 
-     
+        // Your WhatsApp number (without + symbol, country code included)
+        const whatsappNumber = "233534078670";
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-// ======================= Initialize Scroll Features =======================
-document.addEventListener("DOMContentLoaded", () => {
-  // Initialize scroll animations
-  new ScrollAnimationManager();
+        // Show success message
+        const alertBox = document.querySelector(".Alert");
+        if (alertBox) {
+          alertBox.classList.add("open");
+        }
 
-  // Initialize parallax
-  new ParallaxManager();
+        // Reset form
+        contactForm.reset();
 
-  // Add scroll animation classes to elements
-  const cards = document.querySelectorAll(
-    ".project-card, .service-card, .skill-card, .pricing-card",
-  );
-  cards.forEach((card, index) => {
-    card.classList.add("scroll-animate");
-    card.setAttribute("data-delay", `${index * 0.1}`);
-  });
+        // Open WhatsApp in new tab
+        window.open(whatsappURL, "_blank");
 
-  // Add animations to headings
-  const headings = document.querySelectorAll("h2, h3");
-  headings.forEach((heading) => {
-    heading.classList.add("scroll-animate-down");
-  });
-
-  // Add animations to paragraphs
-  const paragraphs = document.querySelectorAll(
-    ".section-subtitle, .description",
-  );
-  paragraphs.forEach((p) => {
-    p.classList.add("scroll-animate");
-  });
+        // Hide alert after 3 seconds
+        setTimeout(() => {
+          if (alertBox) {
+            alertBox.classList.remove("open");
+          }
+        }, 3000);
+      }
+    });
+  }
 });
