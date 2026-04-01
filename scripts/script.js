@@ -41,28 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ===== SCROLL TO REVEAL ANIMATION =====
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -100px 0px",
-  };
-
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("scroll-animate");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Observe cards for scroll reveal (not sections, as they have their own animations)
-  const revealElements = document.querySelectorAll(
-    ".service-card, .project-card, .pricing-card, .testimonial-card, .benefit-item",
-  );
-  revealElements.forEach((element) => {
-    observer.observe(element);
-  });
 
   // ===== WHATSAPP CONTACT FORM =====
   const contactForm = document.getElementById("contact-form");
