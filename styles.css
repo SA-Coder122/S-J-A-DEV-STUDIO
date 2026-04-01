@@ -67,9 +67,7 @@ h6 {
 }
 
 /* ============== 3D TRANSFORMS & PERSPECTIVE ============== */
-body {
-  perspective: 1000px;
-}
+
 
 /* Enable 3D transforms on cards */
 .service-card,
