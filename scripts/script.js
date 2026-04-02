@@ -1,3 +1,14 @@
+// ===== LOADING SCREEN =====
+window.addEventListener("load", function () {
+  const loadingScreen = document.getElementById("loading-screen");
+  if (loadingScreen) {
+    // Hide the loading screen after animation completes (2.4s from CSS)
+    setTimeout(() => {
+      loadingScreen.classList.add("hidden");
+    }, 2600);
+  }
+});
+
 // Mobile Navigation Toggle
 document.addEventListener("DOMContentLoaded", function () {
   const navToggle = document.querySelector(".nav-toggle");
@@ -40,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
       navLinks.classList.remove("active");
     }
   });
-
 
   // ===== WHATSAPP CONTACT FORM =====
   const contactForm = document.getElementById("contact-form");
