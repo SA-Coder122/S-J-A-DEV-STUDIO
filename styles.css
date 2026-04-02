@@ -871,14 +871,12 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(20, 20, 25, 0.6);
   backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.04) inset,
     0 24px 48px rgba(0, 0, 0, 0.45);
   transition: var(--transition);
-  animation: fadeInLeft ease ;
-  animation-timeline: view();
-  animation-range: entry 0% cover 50%;
+  
 }
 
 .service-card::after {
@@ -1174,7 +1172,7 @@ nav {
   text-align: left;
   background: rgba(20, 20, 25, 0.75);
   backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 28px;
   padding: 2.5rem;
@@ -1484,9 +1482,7 @@ nav {
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.04) inset,
     0 0 60px rgba(139, 92, 246, 0.15);
-    animation: fadeInUp ease ;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+    
 }
 
 .benefits-title {
