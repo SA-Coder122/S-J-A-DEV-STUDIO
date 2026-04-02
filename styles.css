@@ -905,16 +905,6 @@ nav {
   z-index: 1;
 }
 
-.service-card:nth-child(1) {
-  --index: 1;
-}
-.service-card:nth-child(2) {
-  --index: 2;
-}
-.service-card:nth-child(3) {
-  --index: 3;
-}
-
 .service-card:hover {
   transform: translateY(-8px);
   border-color: rgba(192, 132, 252, 0.35);
@@ -1015,17 +1005,17 @@ nav {
 }
 
 .project-card {
-  background-color: var(--card-bg);
+  background-color: rgba(192, 132, 252, 0.219);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: var(--transition);
   border: 1px solid var(--border-color);
   position: relative;
-  height: 30rem;
-  animation: fadeInRight linear ;
-  animation-timeline: view();
-  animation-range: entry 0% cover 50%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .project-card:hover {
@@ -1038,6 +1028,11 @@ nav {
   aspect-ratio: 16/9;
   overflow: hidden;
   background: linear-gradient(135deg, var(--card-bg), var(--border-color));
+  z-index: 0;
+  height: 50%;
+  inset: 0;
+  margin: 10px;
+  border-radius: 6px
 }
 
 .project-image img {
@@ -1053,7 +1048,7 @@ nav {
 
 .project-overlay {
   position: absolute;
-  inset: 0;
+  inset: 0 0 0 0;
   background: linear-gradient(
     135deg,
     rgba(59, 130, 246, 0.8),
@@ -1071,12 +1066,16 @@ nav {
 }
 
 .project-card h3 {
-  padding: 1.5rem 1.5rem 0;
+  padding: 0.5rem 1rem 0;
   color: var(--text-color);
+  z-index: 20;
+  font-size-adjust: 0.4;
 }
 
 .project-card p {
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+  z-index: 20;
+
 }
 
 .tech-stack {
@@ -1084,7 +1083,6 @@ nav {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-  position: absolute;
   bottom: 0;
 }
 
@@ -1101,148 +1099,6 @@ nav {
   font-weight: 500;
 }
 
-/*======================== Skills Section ============*/
-#skills {
-  padding: 6rem 0;
-  background: linear-gradient(180deg, var(--card-bg) 0%, var(--bg-color) 100%);
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(70%) scaleX(0);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0) scaleX(1);
-    opacity: 1;
-  }
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.skill-card {
-  background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-  opacity: 0;
-  animation: fadeInUp 0.6s ease-out forwards;
-  animation-delay: calc(var(--index, 0) * 0.15s);
-}
-
-.skill-card:nth-child(1) {
-  --index: 1;
-}
-.skill-card:nth-child(2) {
-  --index: 2;
-}
-.skill-card:nth-child(3) {
-  --index: 3;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-color);
-}
-
-.skill-card h3 {
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-}
-
-.skill-item {
-  margin-bottom: 1.5rem;
-}
-
-.skill_text {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.skill-level {
-  height: 6px;
-  background: var(--card-bg);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-  border-radius: 3px;
-  animation: slideIn 1s ease-out forwards;
-  animation-timeline: view(100% 30%);
-}
-
-/*================= About Section =========================*/
-#about {
-  padding: 6rem 0;
-  background: var(--bg-color);
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  align-items: center;
-  margin-top: 3rem;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.about-image {
-  aspect-ratio: 1;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about-text p {
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  line-height: 1.9;
-}
-
-.about-details {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.detail-item {
-  padding: 1.5rem;
-  background: var(--card-bg);
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  transition: var(--transition);
-}
-
-.detail-item:hover {
-  border-color: var(--primary-color);
-  transform: translateY(-3px);
-}
-
-.detail-item strong {
-  color: var(--primary-color);
-  display: block;
-  margin-bottom: 0.5rem;
-}
 
 /* ============== PRICING SECTION ============== */
 #pricing {
@@ -1330,7 +1186,7 @@ nav {
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.04) inset,
     0 24px 48px rgba(0, 0, 0, 0.45);
-    animation: zoomIn  ease ;
+    animation: zoomIn  linear ;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
@@ -1532,9 +1388,9 @@ nav {
     0 20px 40px rgba(0, 0, 0, 0.4);
   opacity: 1;
   visibility: visible;
-  animation: rotateIn linear ;
+  animation: rotateIn ease ;
   animation-timeline: view();
-  animation-range: entry 0% cover 50%;
+  animation-range: entry 0% cover 40%;
 }
 
 .addon-card::after {
