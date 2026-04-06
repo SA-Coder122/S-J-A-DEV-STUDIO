@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Orel City Company Limited</title>
+    <meta
+      name="description"
+      content="Contact Orel City Company Limited for civil engineering and construction services in Ghana. A2B2-classified road construction contractor."
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.svg" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="main-header">
+      <div class="container">
+        <nav class="main-nav">
+          <a href="index.html" class="logo">
+            <img
+              src="assets/images/logo.svg"
+              alt="Orel City Company Limited Logo"
+              width="150"
+              height="60"
+            />
+          </a>
+
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li>
+              <a href="contact.html" class="active btn btn-outline"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / <span>Contact</span>
+        </div>
+        <h1>Contact Us</h1>
+        <p class="page-subtitle">
+          Get in touch with our team for your construction and engineering needs
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <!-- Contact Info -->
+          <div class="contact-info-section">
+            <h2>Get In Touch</h2>
+            <p>
+              We're ready to discuss your next infrastructure project. Contact
+              us via any of the channels below.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="contact-icon">📍</div>
+                <div class="contact-details">
+                  <h3>Office Address</h3>
+                  <address>
+                    Djanie Ashie Street<br />
+                    East Legon, Accra<br />
+                    Ghana
+                  </address>
+                  <p class="note">
+                    <small>Please verify address before visiting</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-icon">📞</div>
+                <div class="contact-details">
+                  <h3>Phone Numbers</h3>
+                  <p>
+                    <a href="tel:+233302559792">+233 30 255 97 92</a><br />
+                    <a href="tel:+233244000000">+233 24 400 0000</a> (Mobile)
+                  </p>
+                  <p class="note">
+                    <small>Office hours: Mon-Fri 8:00 AM - 5:00 PM</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-details">
+                  <h3>Email Address</h3>
+                  <p>
+                    <a href="mailto:info@orelcitygh.com">info@orelcitygh.com</a
+                    ><br />
+                    <a href="mailto:projects@orelcitygh.com"
+                      >projects@orelcitygh.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-icon">🏢</div>
+                <div class="contact-details">
+                  <h3>Business Registration</h3>
+                  <p>
+                    Registered with Ministry of Roads and Highways<br />
+                    A2B2 Classification<br />
+                    Duly registered construction company in Ghana
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="office-hours">
+              <h3>Office Hours</h3>
+              <ul>
+                <li><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</li>
+                <li><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
+                <li><strong>Sunday:</strong> Closed</li>
+                <li>
+                  <strong>Emergency Services:</strong> Available 24/7 for
+                  existing clients
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <p>Fill out the form below and we'll respond within 24 hours.</p>
+
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Full Name *</label>
+                <input type="text" id="contactName" name="name" required />
+                <div class="error-message" id="nameError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" name="email" required />
+                <div class="error-message" id="emailError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone">Phone Number *</label>
+                <input type="tel" id="contactPhone" name="phone" required />
+                <div class="error-message" id="phoneError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactCompany">Company / Organization</label>
+                <input type="text" id="contactCompany" name="company" />
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Subject *</label>
+                <select id="contactSubject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="quote">Request for Quote</option>
+                  <option value="project">Project Inquiry</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                  <option value="employment">Employment/Careers</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message *</label>
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  rows="6"
+                  required
+                ></textarea>
+                <div class="error-message" id="messageError"></div>
+              </div>
+
+              <div class="form-group">
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="contactConsent"
+                    name="consent"
+                    required
+                  />
+                  <label for="contactConsent"
+                    >I consent to Orel City Company Limited collecting and
+                    processing my personal data for the purpose of responding to
+                    my inquiry. *</label
+                  >
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="text-center">Our Location</h2>
+
+        <div class="map-container">
+          <!-- CLIENT NOTE: Replace with actual Google Maps embed code -->
+          <div class="map-placeholder">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.492589554283!2d-0.1751111240551464!3d5.650658931476751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzknMDIuNCJOIDDCsDEwJzMwLjQiVw!5e0!3m2!1sen!2sgh!4v1234567890123!5m2!1sen!2sgh"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 2rem">
+          <a
+            href="https://maps.google.com/?q=Djanie+Ashie+Street,+East+Legon,+Accra"
+            class="btn btn-secondary"
+            target="_blank"
+            >Open in Google Maps</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="grid grid-4">
+          <div class="footer-col">
+            <img
+              src="assets/images/logo.svg"
+              alt="Orel City Logo"
+              class="footer-logo"
+              width="180"
+              height="70"
+            />
+            <p class="footer-description">
+              A2B2-classified civil engineering and construction company
+              building Ghana's infrastructure.
+            </p>
+            <div class="mrh-badge">
+              <img
+                src="assets/images/mrh-badge.svg"
+                alt="MRH A2B2 Certification"
+                width="80"
+                height="80"
+              />
+              <span>MRH A2B2 Registered</span>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="services.html#road-construction">Road Construction</a>
+              </li>
+              <li><a href="services.html#drainage-works">Drainage Works</a></li>
+              <li>
+                <a href="services.html#civil-engineering">Civil Engineering</a>
+              </li>
+              <li>
+                <a href="services.html#building-construction"
+                  >Building Construction</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contact Info</h3>
+            <address class="contact-info">
+              <p>
+                <strong>Address:</strong><br />
+                Djanie Ashie Street,<br />
+                East Legon, Accra
+              </p>
+
+              <p>
+                <strong>Phone:</strong><br />
+                <a href="tel:+233302559792">+233 30 255 97 92</a>
+              </p>
+
+              <p>
+                <strong>Email:</strong><br />
+                <a href="mailto:info@orelcitygh.com">info@orelcitygh.com</a>
+              </p>
+            </address>
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><span>FB</span></a>
+              <a href="#" aria-label="LinkedIn"><span>IN</span></a>
+              <a href="#" aria-label="Twitter"><span>TW</span></a>
+              <a href="#" aria-label="YouTube"><span>YT</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> Orel City Company Limited. All
+            rights reserved.
+          </p>
+          <p>
+            Registered with Ministry of Roads and Highways (A2B2 Classification)
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

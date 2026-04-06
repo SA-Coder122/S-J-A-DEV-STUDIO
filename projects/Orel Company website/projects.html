@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Projects | Civil Engineering Portfolio</title>
+    <meta
+      name="description"
+      content="Explore Orel City Company Limited's portfolio of completed and ongoing civil engineering projects across Ghana. A2B2-classified road construction."
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.svg" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="main-header">
+      <div class="container">
+        <nav class="main-nav">
+          <a href="index.html" class="logo">
+            <img
+              src="assets/images/logo.svg"
+              alt="Orel City Company Limited Logo"
+              width="150"
+              height="60"
+            />
+          </a>
+
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li>
+              <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / <span>Projects</span>
+        </div>
+        <h1>Our Projects</h1>
+        <p class="page-subtitle">Infrastructure development across Ghana</p>
+      </div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="filter-controls">
+          <h2>Filter Projects</h2>
+          <div class="filter-tags">
+            <button class="filter-tag active" data-filter="all">
+              All Projects
+            </button>
+            <button class="filter-tag" data-filter="road">
+              Road Construction
+            </button>
+            <button class="filter-tag" data-filter="drainage">
+              Drainage Works
+            </button>
+            <button class="filter-tag" data-filter="civil">Civil Works</button>
+            <button class="filter-tag" data-filter="completed">
+              Completed
+            </button>
+            <button class="filter-tag" data-filter="ongoing">Ongoing</button>
+            <button class="filter-tag" data-filter="greater-accra">
+              Greater Accra
+            </button>
+            <button class="filter-tag" data-filter="eastern">
+              Eastern Region
+            </button>
+          </div>
+
+          <div class="filter-search">
+            <input
+              type="text"
+              id="projectSearch"
+              placeholder="Search projects by name or location..."
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="projects-grid" id="projectsContainer">
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem">
+          <p class="no-results" id="noResults" style="display: none">
+            No projects match your filters. Try different criteria.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section bg-dark">
+      <div class="container">
+        <div class="grid grid-4">
+          <div class="stat-card">
+            <div class="stat-number" data-count="50">0+</div>
+            <h3>Projects Completed</h3>
+            <p>Across multiple regions in Ghana</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number" data-count="150">0+</div>
+            <h3>Kilometers of Roads</h3>
+            <p>Constructed and rehabilitated</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number" data-count="12">0+</div>
+            <h3>Years Experience</h3>
+            <p>In civil engineering and construction</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number" data-count="100">0+</div>
+            <h3>Skilled Workers</h3>
+            <p>Engineers, technicians, and staff</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Client Testimonials</h2>
+          <p>What our clients say about our work</p>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Orel City Company delivered our road project on time and within
+                budget. Their attention to quality was impressive."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Ministry of Roads & Highways</h4>
+                <p>Government Agency</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Professional team that handled our drainage challenges
+                effectively. Would recommend for civil works."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Municipal Assembly</h4>
+                <p>Local Government</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Reliable contractor who understands construction timelines and
+                quality requirements."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Private Developer</h4>
+                <p>Commercial Client</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="grid grid-4">
+          <div class="footer-col">
+            <img
+              src="assets/images/logo.svg"
+              alt="Orel City Logo"
+              class="footer-logo"
+              width="180"
+              height="70"
+            />
+            <p class="footer-description">
+              A2B2-classified civil engineering and construction company
+              building Ghana's infrastructure.
+            </p>
+            <div class="mrh-badge">
+              <img
+                src="assets/images/placeholder.png"
+                alt="MRH A2B2 Certification"
+                width="80"
+                height="80"
+              />
+              <span>MRH A2B2 Registered</span>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="services.html#road-construction">Road Construction</a>
+              </li>
+              <li><a href="services.html#drainage-works">Drainage Works</a></li>
+              <li>
+                <a href="services.html#civil-engineering">Civil Engineering</a>
+              </li>
+              <li>
+                <a href="services.html#building-construction"
+                  >Building Construction</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contact Info</h3>
+            <address class="contact-info">
+              <p>
+                <strong>Address:</strong><br />
+                Djanie Ashie Street,<br />
+                East Legon, Accra
+              </p>
+
+              <p>
+                <strong>Phone:</strong><br />
+                <a href="tel:+233302559792">+233 30 255 97 92</a>
+              </p>
+
+              <p>
+                <strong>Email:</strong><br />
+                <a href="mailto:info@orelcitygh.com">info@orelcitygh.com</a>
+              </p>
+            </address>
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><span>FB</span></a>
+              <a href="#" aria-label="LinkedIn"><span>IN</span></a>
+              <a href="#" aria-label="Twitter"><span>TW</span></a>
+              <a href="#" aria-label="YouTube"><span>YT</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> Orel City Company Limited. All
+            rights reserved.
+          </p>
+          <p>
+            Registered with Ministry of Roads and Highways (A2B2 Classification)
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div class="modal" id="projectDetailModal" aria-hidden="true">
+      <div class="modal-content large">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+          <!-- Content populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
