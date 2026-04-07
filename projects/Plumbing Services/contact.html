@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | EliteFlow Plumbing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo"><i class="fa-solid fa-droplet"></i> EliteFlow</div>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="cta-btn">Get a Quote</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div style="background: var(--bg-light); padding: 6rem 2rem 2rem;">
+        <div class="container section-title" style="margin-bottom: 2rem;">
+            <h2>Initiate a Project</h2>
+            <p>Our project managers are ready to discuss your mechanical needs.</p>
+        </div>
+    </div>
+
+    <section class="container" style="padding-top: 0;">
+        <div class="contact-grid">
+            
+            <div>
+                <h3 style="margin-bottom: 1.5rem; font-size: 1.8rem;">Direct Lines</h3>
+                
+                <div style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem;">
+                    <i class="fa-solid fa-building" style="font-size: 1.5rem; color: var(--accent); margin-top: 5px;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 0.2rem;">Headquarters</h4>
+                        <p style="color: var(--text-muted);">4500 High-Tech Blvd, Suite 200<br>Metropolis, NY 10001</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem;">
+                    <i class="fa-solid fa-phone" style="font-size: 1.5rem; color: var(--accent); margin-top: 5px;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 0.2rem;">Dispatch Center</h4>
+                        <p style="color: var(--text-muted);">1-800-ELITE-01 (24/7 Support)<br>Local: (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <form action="#" method="POST">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Property Type</label>
+                        <select style="width: 100%; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 4px; background: white;">
+                            <option>Residential</option>
+                            <option>Commercial</option>
+                            <option>Industrial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Project Scope / Emergency Details</label>
+                        <textarea rows="4" placeholder="How can we assist you today?" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn">Submit Request</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="background: var(--bg-white);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Do you offer emergency after-hours service? <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p style="padding-top: 1rem;">Yes, we maintain a fully staffed 24/7 dispatch center. Our on-call technicians are equipped with fully stocked vehicles to handle critical emergencies at any hour, minimizing damage to your property.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Are your technicians licensed and insured? <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p style="padding-top: 1rem;">Absolutely. Every lead technician holds a Master Plumber license. Additionally, EliteFlow carries a $5M umbrella liability insurance policy to ensure complete protection for our high-end commercial and residential clients.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Do you provide warranties on your work? <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p style="padding-top: 1rem;">We provide a 2-year workmanship warranty on all labor, which is double the industry standard. Parts and equipment are covered by their respective manufacturer warranties, which we manage on your behalf.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EliteFlow Mechanical. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
